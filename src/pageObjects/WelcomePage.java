@@ -44,6 +44,7 @@ public class WelcomePage {
 	}
 	
 	public boolean isWelcomeMessageShown() {
+		System.out.println("Bool: " + txtWelcomeMessageContent1.isDisplayed());
 		return txtWelcomeMessageContent1.isDisplayed();
 	}
 }

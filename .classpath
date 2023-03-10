@@ -87,6 +87,6 @@
 	<classpathentry kind="lib" path="C:/Users/YTACK/Documents/CTG/AutomationTrack/Selenium/selenium-java-4.8.1/lib/opentelemetry-semconv-1.22.0-alpha.jar"/>
 	<classpathentry kind="lib" path="C:/Users/YTACK/Documents/CTG/AutomationTrack/Selenium/selenium-java-4.8.1/lib/reactive-streams-1.0.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/YTACK/Documents/CTG/AutomationTrack/Selenium/selenium-java-4.8.1/lib/slf4j-api-2.0.6.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
