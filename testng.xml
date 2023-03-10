@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Login Test Suite">
+  <test thread-count="5" name="LoginTest Error">
+    <classes>
+      <class name="TestCollection">
+      	<methods>
+			  <include name ="loginWithUsernameAndPassword"/>
+		</methods>
+	  </class>
+    </classes>
+  </test> <!-- Test1 -->
+  <test name="LoginTest Success">
+	  <classes>
+		  <class name="TestCollection">
+			  <methods>
+				  <include name="loginWithCorrectUsernameAndPassword"></include>
+			  </methods>
+		  </class>
+	  </classes>
+  </test>
+</suite> <!-- Suite -->
