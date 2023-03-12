@@ -9,7 +9,7 @@ public class MenuPage {
 	@FindBy (how = How.ID, using = "logout")
 	private WebElement btnLogout;
 	
-	public void Logout() {
+	public void logout() {
 		btnLogout.click();
 	}
 }

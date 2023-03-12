@@ -1,24 +1,24 @@
 
 public class Person {
 
-	static String Name = "Tack";
-	static String FirstName = "Yannis";
-	static String Sex = "M";
-	static String Email = "yannis.tack@ctg.com";
-	static String Telephone = "0486273623";
-	static String Company = "CTG";
-	static String SSU = "Testing";
-	static String Seniority = "Experienced";
+	private static final String NAME = "Tack";
+	private static final String FIRSTNAME = "Yannis";
+	private static final String SEX = "M";
+	private static final String EMAIL = "yannis.tack@ctg.com";
+	private static final String TELEPHONE = "0486273623";
+	private static final String COMPANY = "CTG";
+	private static final String SSU = "Testing";
+	private static final String SENIORITY = "Experienced";
 	
 	
 	
-	public static String GetName() {return Name;}
-	public static String GetFirstName() {return FirstName;}
-	public static String GetSex() {return Sex;}
-	public static String GetEmail() {return Email;}
-	public static String GetTelephone() {return Telephone;}
-	public static String GetCompany() {return Company;}
-	public static String GetSSU() {return SSU;}
-	public static String GetSeniority() {return Seniority;}
+	public static String getName() {return NAME;}
+	public static String getFirstName() {return FIRSTNAME;}
+	public static String getSex() {return SEX;}
+	public static String getEmail() {return EMAIL;}
+	public static String getTelephone() {return TELEPHONE;}
+	public static String getCompany() {return COMPANY;}
+	public static String getSSU() {return SSU;}
+	public static String getSeniority() {return SENIORITY;}
 
 }

@@ -39,7 +39,7 @@ public class LoginPage {
 		slctLanguage.selectByVisibleText(language);
 	}
 	
-	public String GetErrorMessage() {
+	public String getErrorMessage() {
 		return txtError.getText();
 	}
 }
