@@ -1,6 +1,12 @@
-
+/**
+ * Data storage for the person Yannis.
+ * Includes this persons properties.
+ * @author ytack
+ *
+ */
 public class Person {
 
+	
 	private static final String NAME = "Tack";
 	private static final String FIRSTNAME = "Yannis";
 	private static final String SEX = "M";
@@ -11,8 +17,13 @@ public class Person {
 	private static final String SENIORITY = "Experienced";
 	
 	
-	
+	/**
+	 * Gets the name of this person.
+	 */
 	public static String getName() {return NAME;}
+	/**
+	 * Gets the first name of this person.
+	 */
 	public static String getFirstName() {return FIRSTNAME;}
 	public static String getSex() {return SEX;}
 	public static String getEmail() {return EMAIL;}

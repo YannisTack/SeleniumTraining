@@ -22,6 +22,11 @@ public class LoginPage {
 	@FindBy (how = How.XPATH, using = "//p[@class='error']")
 	private WebElement txtError;
 	
+	/**
+	 * Logs in with the given username and password
+	 * @param username The username as text
+	 * @param password The password as text
+	 */
 	public void loginWith(String username, String password) {
 		txtUsername.clear();
 		txtUsername.sendKeys(username);
@@ -30,6 +35,9 @@ public class LoginPage {
 		btnLogin.click();
 	}
 	
+	/**
+	 * Logs in as a valid admin user.
+	 */
 	public void loginAsAdmin() {
 		loginWith("admin", "superduper");
 	}
@@ -39,6 +47,10 @@ public class LoginPage {
 		slctLanguage.selectByVisibleText(language);
 	}
 	
+	/**
+	 * Gets the error message from the login page.
+	 * @return Returns the error message if available.
+	 */
 	public String getErrorMessage() {
 		return txtError.getText();
 	}
