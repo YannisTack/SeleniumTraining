@@ -6,6 +6,11 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+/**
+ * Manages webdrivers and stores the active one as singleton.
+ * @author ytack
+ *
+ */
 public class DriverManager {
 	private static WebDriver driver;
 	private static EventFiringWebDriver eDriver;
