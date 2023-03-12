@@ -32,7 +32,7 @@ public class TestCollection {
 	@BeforeMethod
 	public void beforeMethod() {
 		System.out.println("logout");
-		  menu.Logout();
+		  menu.logout();
 	  }
 	
 	@DataProvider(name = "LoginTest Error")
