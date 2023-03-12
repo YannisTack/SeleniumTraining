@@ -11,165 +11,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
+@SuppressWarnings("deprecation")
 public class EListener implements WebDriverEventListener {
 
-	@Override
-	public void afterAlertAccept(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterAlertDismiss(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterClickOn(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterFindBy(By by, WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public <X> void afterGetScreenshotAs(OutputType<X> target, X screenshot) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterGetText(WebElement element, WebDriver driver, String text) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterNavigateBack(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterNavigateForward(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterNavigateRefresh(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterNavigateTo(String url, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterScript(String script, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterSwitchToWindow(String windowName, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeAlertAccept(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeAlertDismiss(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeClickOn(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public <X> void beforeGetScreenshotAs(OutputType<X> target) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeGetText(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeNavigateBack(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeNavigateForward(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeNavigateRefresh(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeNavigateTo(String url, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeScript(String script, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeSwitchToWindow(String windowName, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
+	
 	public void onException(Throwable throwable, WebDriver driver) {
 		if (throwable instanceof NoSuchElementException) {
 			File f = DriverManager.getEDriver().getScreenshotAs(OutputType.FILE);
@@ -181,6 +26,137 @@ public class EListener implements WebDriverEventListener {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	public void beforeAlertAccept(WebDriver driver) {
+		// TODO Auto-generated method stub
+		System.out.println("");
+		
+	}
+
+	public void afterAlertAccept(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterAlertDismiss(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeAlertDismiss(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeNavigateTo(String url, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterNavigateTo(String url, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeNavigateBack(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterNavigateBack(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeNavigateForward(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterNavigateForward(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeNavigateRefresh(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterNavigateRefresh(WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterFindBy(By by, WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeClickOn(WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterClickOn(WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeScript(String script, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterScript(String script, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeSwitchToWindow(String windowName, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterSwitchToWindow(String windowName, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public <X> void beforeGetScreenshotAs(OutputType<X> target) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public <X> void afterGetScreenshotAs(OutputType<X> target, X screenshot) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeGetText(WebElement element, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterGetText(WebElement element, WebDriver driver, String text) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
