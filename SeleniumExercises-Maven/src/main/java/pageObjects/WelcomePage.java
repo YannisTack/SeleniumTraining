@@ -2,26 +2,34 @@ package pageObjects;
 
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 public class WelcomePage {
+	private WebDriver driver;
 
-	@FindBy (how = How.XPATH, using = "//div[@id='welcome']/h1")
+	@FindBy (xpath = "//div[@id='welcome']/h1")
 	private WebElement txtWelcomeMessageTitle;
 	
-	@FindBy (how = How.XPATH, using = "//div[@id='welcome']/h1/following-sibling::p")
+	@FindBy (xpath = "//div[@id='welcome']/h1/following-sibling::p")
 	private WebElement txtWelcomeMessageContent1;
 	
-	@FindBy (how = How.XPATH, using = "//input[@onclick='showBear()']")
+	@FindBy (xpath = "//input[@onclick='showBear()']")
 	private WebElement btnShowBear;
 	
-	@FindBy (how = How.ID, using = "bear")
+	@FindBy (id = "bear")
 	private WebElement imgBear;
 	
-	@FindBy (how = How.XPATH, using = "//a[@href='admin.html']")
+	@FindBy (xpath = "//a[@href='admin.html']")
 	private WebElement btnAdmin;
+	
+	public WelcomePage(WebDriver driver)
+	{
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 	
 	public String[] getWelcomeMessage( ) {
 		String[] welcomeMsg = new String[] {
@@ -31,16 +39,18 @@ public class WelcomePage {
 		return welcomeMsg;
 	}
 	
-	public void displayTheBear() {
+	public WelcomePage displayTheBear() {
 		btnShowBear.click();
+		return this;
 	}
 	
 	public boolean isTheBearDisplayed() {
 		return imgBear.isDisplayed();
 	}
 	
-	public void navigateToAdminPage() {
+	public AdminPage navigateToAdminPage() {
 		btnAdmin.click();
+		return new AdminPage(driver);
 	}
 	
 	public boolean isWelcomeMessageShown() {

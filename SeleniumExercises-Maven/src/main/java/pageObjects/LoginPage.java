@@ -1,50 +1,61 @@
 package pageObjects;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class LoginPage {
+	private WebDriver driver;
 
-	@FindBy (how = How.CLASS_NAME, using = "content")
+	@FindBy (className = "content")
 	private WebElement btnLogin;
 	
-	@FindBy (how = How.ID, using = "username")
+	@FindBy (id = "username")
 	private WebElement txtUsername;
 	
-	@FindBy (how = How.ID, using = "password")
+	@FindBy (id = "password")
 	private WebElement txtPassword;
 	
-	@FindBy (how = How.ID, using = "language")
+	@FindBy (id = "language")
 	private WebElement drpLanguage;
 	
-	@FindBy (how = How.XPATH, using = "//p[@class='error']")
+	@FindBy (xpath = "//p[@class='error']")
 	private WebElement txtError;
+	
+	public LoginPage(WebDriver driver)
+	{
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 	
 	/**
 	 * Logs in with the given username and password
 	 * @param username The username as text
 	 * @param password The password as text
 	 */
-	public void loginWith(String username, String password) {
+	public WelcomePage loginWith(String username, String password) {
 		txtUsername.clear();
 		txtUsername.sendKeys(username);
 		txtPassword.clear();
 		txtPassword.sendKeys(password);
 		btnLogin.click();
+		return new WelcomePage(driver);
 	}
 	
 	/**
 	 * Logs in as a valid admin user.
 	 */
-	public void loginAsAdmin() {
-		loginWith("admin", "superduper");
+	public WelcomePage loginAsAdmin() {
+		return loginWith("admin", "superduper");
 	}
 	
-	public void setLanguageTo(String language) {
+	public LoginPage setLanguageTo(String language) {
 		Select slctLanguage = new Select(drpLanguage);
 		slctLanguage.selectByVisibleText(language);
+		return this;
 	}
 	
 	/**

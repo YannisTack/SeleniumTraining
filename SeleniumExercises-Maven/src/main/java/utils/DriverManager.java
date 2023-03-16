@@ -17,7 +17,7 @@ public class DriverManager {
 	
 	public static WebDriver getDriver() {
 		if (driver == null) {
-			setChromeDriver();
+			setEdgeDriver();
 		}
 		return driver;
 	}

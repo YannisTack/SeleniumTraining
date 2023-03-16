@@ -10,29 +10,27 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 public class TestCollection {
-	private static MenuPage menu;
-	private static LoginPage login;
-	private static WelcomePage welcome;
 	
 	@BeforeSuite
 	public static void setup() {
-		  DriverManager.getEDriver().get("https://satrngselcypr.z16.web.core.windows.net/");
-		  menu = new MenuPage();
-		  PageFactory.initElements(DriverManager.getEDriver(), menu);
-		  login = new LoginPage();
-		  PageFactory.initElements(DriverManager.getEDriver(), login);
-		  welcome = new WelcomePage();
-		  PageFactory.initElements(DriverManager.getEDriver(), welcome);
+		  DriverManager.getDriver().get("https://satrngselcypr.z16.web.core.windows.net/");
 	  }
+	
+	@AfterSuite
+	public static void teardown() {
+		DriverManager.killDriver();
+	}
 	  
 	@BeforeMethod
 	public void beforeMethod() {
 		System.out.println("logout");
-		  menu.logout();
+		MenuPage menu = new MenuPage(DriverManager.getDriver());
+		menu.logout();
 	  }
 	
 	@DataProvider(name = "LoginTest Error")
@@ -46,14 +44,17 @@ public class TestCollection {
 	}
 	@Test(dataProvider = "LoginTest Error")
 	public void loginWithUsernameAndPassword(String username, String password) {
-		login.loginWith(username, password);
-		Assert.assertFalse(welcome.isWelcomeMessageShown(), "Welcome message is displayed for incorrect login data");
+		LoginPage login = new LoginPage(DriverManager.getDriver());
+		Assert.assertFalse(login.loginWith(username, password)
+				.isWelcomeMessageShown(), "Welcome message is displayed for incorrect login data");
 	}
 	
 	@Test
 	public void loginWithCorrectUsernameAndPassword() {
-		login.loginWith("admin", "superduper");
-		Assert.assertTrue(welcome.isWelcomeMessageShown(), "Welcome message is not displayed for correct login data");
+		LoginPage login = new LoginPage(DriverManager.getDriver());
+		login.loginAsAdmin();
+		Assert.assertTrue(login.loginAsAdmin()
+				.isWelcomeMessageShown(), "Welcome message is not displayed for correct login data");
 	}
 	  
 	

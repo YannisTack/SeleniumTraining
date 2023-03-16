@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Login_Test_Suite" class="show-methods failed suite-Login_Test_Suite"> (show)</a> <!-- show-methods failed suite-Login_Test_Suite -->
                     </span>
                     <div class="method-list-content failed suite-Login_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="loginWithCorrectUsernameAndPassword">loginWithCorrectUsernameAndPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="loginWithUsernameAndPassword(admin, superduper)">loginWithUsernameAndPassword(admin, superduper)</a> <!-- method navigator-link -->
@@ -117,12 +122,7 @@
                     <div class="method-list-content passed suite-Login_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="loginWithCorrectUsernameAndPassword">loginWithCorrectUsernameAndPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="loginWithUsernameAndPassword(/, /)">loginWithUsernameAndPassword(/, /)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="loginWithUsernameAndPassword(invalidUser, superduper)">loginWithUsernameAndPassword(invalidUser, superduper)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -132,7 +132,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="loginWithUsernameAndPassword(invalidUser, superduper)">loginWithUsernameAndPassword(invalidUser, superduper)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="loginWithUsernameAndPassword(/, /)">loginWithUsernameAndPassword(/, /)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Login_Test_Suite -->
@@ -155,12 +155,45 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="loginWithCorrectUsernameAndPassword">
+                  </a> <!-- loginWithCorrectUsernameAndPassword -->
+                  <span class="method-name">loginWithCorrectUsernameAndPassword</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=111.0.1661.41)
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2b63bbc3297429657f8da604e9a95168, clearElement {id=28776516-e9a2-4e01-a2a5-dee058eb2de6}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.41, ms:edgeOptions: {debuggerAddress: localhost:50442}, msedge: {msedgedriverVersion: 110.0.1587.57 (01109f626421..., userDataDir: C:\Users\YTACK\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50442/devtoo..., se:cdpVersion: 111.0.1661.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: msedge on WINDOWS (2b63bbc3297429657f8da604e9a95168)] -&gt; id: username]
+Session ID: 2b63bbc3297429657f8da604e9a95168
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:132)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.clear(Unknown Source)
+	at pageObjects.LoginPage.loginWith(LoginPage.java:40)
+	at pageObjects.LoginPage.loginAsAdmin(LoginPage.java:52)
+	at TestCollection.loginWithCorrectUsernameAndPassword(TestCollection.java:50)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="loginWithUsernameAndPassword(admin, superduper)">
                   </a> <!-- loginWithUsernameAndPassword(admin, superduper) -->
                   <span class="method-name">loginWithUsernameAndPassword</span>
                   <span class="parameters">(admin,superduper)</span>
                   <div class="stack-trace">java.lang.AssertionError: Welcome message is displayed for incorrect login data expected [false] but found [true]
-	at TestCollection.loginWithUsernameAndPassword(TestCollection.java:50)
+	at TestCollection.loginWithUsernameAndPassword(TestCollection.java:42)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
@@ -176,17 +209,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithCorrectUsernameAndPassword">
-                  </a> <!-- loginWithCorrectUsernameAndPassword -->
-                  <span class="method-name">loginWithCorrectUsernameAndPassword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginWithUsernameAndPassword(/, /)">
-                  </a> <!-- loginWithUsernameAndPassword(/, /) -->
+                  <a name="loginWithUsernameAndPassword(invalidUser, superduper)">
+                  </a> <!-- loginWithUsernameAndPassword(invalidUser, superduper) -->
                   <span class="method-name">loginWithUsernameAndPassword</span>
-                  <span class="parameters">(/,/)</span>
+                  <span class="parameters">(invalidUser,superduper)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -199,10 +225,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithUsernameAndPassword(invalidUser, superduper)">
-                  </a> <!-- loginWithUsernameAndPassword(invalidUser, superduper) -->
+                  <a name="loginWithUsernameAndPassword(/, /)">
+                  </a> <!-- loginWithUsernameAndPassword(/, /) -->
                   <span class="method-name">loginWithUsernameAndPassword</span>
-                  <span class="parameters">(invalidUser,superduper)</span>
+                  <span class="parameters">(/,/)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -279,23 +305,23 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginWithUsernameAndPassword')
 data.setCell(0, 2, 'TestCollection')
-data.setCell(0, 3, 351);
+data.setCell(0, 3, 307);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginWithUsernameAndPassword')
 data.setCell(1, 2, 'TestCollection')
-data.setCell(1, 3, 247);
+data.setCell(1, 3, 200);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginWithUsernameAndPassword')
 data.setCell(2, 2, 'TestCollection')
-data.setCell(2, 3, 231);
+data.setCell(2, 3, 176);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'loginWithUsernameAndPassword')
 data.setCell(3, 2, 'TestCollection')
-data.setCell(3, 3, 230);
+data.setCell(3, 3, 167);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'loginWithCorrectUsernameAndPassword')
 data.setCell(4, 2, 'TestCollection')
-data.setCell(4, 3, 227);
+data.setCell(4, 3, 158);
 window.suiteTableData['Login_Test_Suite']= { tableData: data, tableDiv: 'times-div-Login_Test_Suite'}
 return data;
 }
@@ -342,45 +368,47 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">3658 ms</span>
+                <span class="method-start">7021 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithUsernameAndPassword(admin, invalidPassword)</span>
-                <span class="method-start">3729 ms</span>
+                <span class="method-start">7110 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">4083 ms</span>
+                <span class="method-start">7420 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithUsernameAndPassword(invalidUser, superduper)</span>
-                <span class="method-start">4117 ms</span>
+                <span class="method-start">7454 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">4348 ms</span>
+                <span class="method-start">7630 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">loginWithUsernameAndPassword(admin, superduper)</span>
-                <span class="method-start">4383 ms</span>
+                <span class="method-start">7670 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">4634 ms</span>
+                <span class="method-start">7873 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithUsernameAndPassword(/, /)</span>
-                <span class="method-start">4665 ms</span>
+                <span class="method-start">7910 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">4953 ms</span>
+                <span class="method-start">8119 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">loginWithCorrectUsernameAndPassword</span>
-                <span class="method-start">4990 ms</span>
+                <span class="method-start">8156 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
