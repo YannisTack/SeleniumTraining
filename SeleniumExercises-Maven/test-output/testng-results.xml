@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="7" passed="0" failed="0" skipped="5">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-03-16T22:54:14 CET" name="Login Test Suite" finished-at="2023-03-16T22:54:14 CET" duration-ms="104">
+    <groups>
+    </groups>
+    <test started-at="2023-03-16T22:54:14 CET" name="LoginTest Error" finished-at="2023-03-16T22:54:14 CET" duration-ms="41">
+      <class name="TestCollection">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@1c7696c6]" started-at="2023-03-16T22:54:14 CET" name="beforeMethod" finished-at="2023-03-16T22:54:14 CET" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@1c7696c6]" started-at="2023-03-16T22:54:14 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-16T22:54:14 CET" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[invalidPassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithUsernameAndPassword -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@1c7696c6]" started-at="2023-03-16T22:54:14 CET" name="beforeMethod" finished-at="2023-03-16T22:54:14 CET" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@1c7696c6]" started-at="2023-03-16T22:54:14 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-16T22:54:14 CET" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invalidUser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[superduper]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithUsernameAndPassword -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@1c7696c6]" started-at="2023-03-16T22:54:14 CET" name="beforeMethod" finished-at="2023-03-16T22:54:14 CET" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@1c7696c6]" started-at="2023-03-16T22:54:14 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-16T22:54:14 CET" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[superduper]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithUsernameAndPassword -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@1c7696c6]" started-at="2023-03-16T22:54:14 CET" name="beforeMethod" finished-at="2023-03-16T22:54:14 CET" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@1c7696c6]" started-at="2023-03-16T22:54:14 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-16T22:54:14 CET" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithUsernameAndPassword -->
+      </class> <!-- TestCollection -->
+    </test> <!-- LoginTest Error -->
+    <test started-at="2023-03-16T22:54:14 CET" name="LoginTest Success" finished-at="2023-03-16T22:54:14 CET" duration-ms="4">
+      <class name="TestCollection">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCollection@74d1dc36]" started-at="2023-03-16T22:54:12 CET" name="setup" finished-at="2023-03-16T22:54:14 CET" duration-ms="2100" status="FAIL">
+          <exception class="org.openqa.selenium.remote.http.ConnectionFailedException">
+            <message>
+              <![CDATA[Unable to establish websocket connection to http://localhost:50346/devtools/browser/95e85f83-0779-4874-ad6a-c610902a3457
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:50346/devtools/browser/95e85f83-0779-4874-ad6a-c610902a3457
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
+at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+at java.base/java.util.Optional.map(Optional.java:260)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:50)
+at utils.DriverManager.setChromeDriver(DriverManager.java:34)
+at utils.DriverManager.getDriver(DriverManager.java:20)
+at utils.DriverManager.setChromeEDriver(DriverManager.java:55)
+at utils.DriverManager.getEDriver(DriverManager.java:27)
+at TestCollection.setup(TestCollection.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.http.ConnectionFailedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginWithCorrectUsernameAndPassword()[pri:0, instance:TestCollection@74d1dc36]" started-at="2023-03-16T22:54:14 CET" name="loginWithCorrectUsernameAndPassword" finished-at="2023-03-16T22:54:14 CET" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.remote.http.ConnectionFailedException">
+            <message>
+              <![CDATA[Unable to establish websocket connection to http://localhost:50346/devtools/browser/95e85f83-0779-4874-ad6a-c610902a3457
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:50346/devtools/browser/95e85f83-0779-4874-ad6a-c610902a3457
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
+at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
+at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
+at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
+at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
+at java.base/java.util.Optional.map(Optional.java:260)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:50)
+at utils.DriverManager.setChromeDriver(DriverManager.java:34)
+at utils.DriverManager.getDriver(DriverManager.java:20)
+at utils.DriverManager.setChromeEDriver(DriverManager.java:55)
+at utils.DriverManager.getEDriver(DriverManager.java:27)
+at TestCollection.setup(TestCollection.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.http.ConnectionFailedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithCorrectUsernameAndPassword -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@74d1dc36]" started-at="2023-03-16T22:54:14 CET" name="beforeMethod" finished-at="2023-03-16T22:54:14 CET" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+      </class> <!-- TestCollection -->
+    </test> <!-- LoginTest Success -->
+  </suite> <!-- Login Test Suite -->
+</testng-results>

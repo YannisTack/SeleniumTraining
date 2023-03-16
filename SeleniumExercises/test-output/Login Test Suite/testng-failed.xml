@@ -7,9 +7,20 @@
         <methods>
           <include name="beforeMethod"/>
           <include name="setup"/>
-          <include name="loginWithUsernameAndPassword" invocation-numbers="2"/>
+          <include name="loginWithUsernameAndPassword"/>
         </methods>
       </class> <!-- TestCollection -->
     </classes>
   </test> <!-- LoginTest Error(failed) -->
+  <test thread-count="5" name="LoginTest Success(failed)">
+    <classes>
+      <class name="TestCollection">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setup"/>
+          <include name="loginWithCorrectUsernameAndPassword"/>
+        </methods>
+      </class> <!-- TestCollection -->
+    </classes>
+  </test> <!-- LoginTest Success(failed) -->
 </suite> <!-- Failed suite [Login Test Suite] -->

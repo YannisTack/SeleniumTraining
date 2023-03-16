@@ -9,20 +9,44 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Login Test Suite</th></tr>
-<tr><td><a href="#t0">LoginTest Error</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1.276</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">LoginTest Success</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">265</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">1.541</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">LoginTest Error</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1.095</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">LoginTest Success</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">199</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">3</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">1.294</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Login Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginTest Error &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestCollection</td><td><a href="#m0">loginWithUsernameAndPassword</a></td><td rowspan="1">1678447437321</td><td rowspan="1">247</td></tr><tr><th colspan="4">LoginTest Error &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">TestCollection</td><td><a href="#m1">loginWithUsernameAndPassword</a></td><td rowspan="3">1678447437603</td><td rowspan="3">230</td></tr><tr class="passedeven"><td><a href="#m2">loginWithUsernameAndPassword</a></td></tr><tr class="passedeven"><td><a href="#m3">loginWithUsernameAndPassword</a></td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">LoginTest Success &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">TestCollection</td><td><a href="#m4">loginWithCorrectUsernameAndPassword</a></td><td rowspan="1">1678447437928</td><td rowspan="1">227</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Login Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginTest Error &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestCollection</td><td><a href="#m0">loginWithUsernameAndPassword</a></td><td rowspan="1">1679004246625</td><td rowspan="1">200</td></tr><tr><th colspan="4">LoginTest Error &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">TestCollection</td><td><a href="#m1">loginWithUsernameAndPassword</a></td><td rowspan="3">1679004246409</td><td rowspan="3">176</td></tr><tr class="passedeven"><td><a href="#m2">loginWithUsernameAndPassword</a></td></tr><tr class="passedeven"><td><a href="#m3">loginWithUsernameAndPassword</a></td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">LoginTest Success &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestCollection</td><td><a href="#m4">loginWithCorrectUsernameAndPassword</a></td><td rowspan="1">1679004247111</td><td rowspan="1">158</td></tr></tbody>
 </table>
 <h2>LoginTest Error</h2><h3 id="m0">TestCollection#loginWithUsernameAndPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>superduper</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Welcome message is displayed for incorrect login data expected [false] but found [true]
-	at TestCollection.loginWithUsernameAndPassword(TestCollection.java:50)
+	at TestCollection.loginWithUsernameAndPassword(TestCollection.java:42)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestCollection#loginWithUsernameAndPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>/</td><td>/</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestCollection#loginWithUsernameAndPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>invalidUser</td><td>superduper</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">TestCollection#loginWithUsernameAndPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>invalidPassword</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">TestCollection#loginWithUsernameAndPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>invalidUser</td><td>superduper</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>LoginTest Success</h2><h3 id="m4">TestCollection#loginWithCorrectUsernameAndPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">TestCollection#loginWithUsernameAndPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>/</td><td>/</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>LoginTest Success</h2><h3 id="m4">TestCollection#loginWithCorrectUsernameAndPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=111.0.1661.41)
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2b63bbc3297429657f8da604e9a95168, clearElement {id=28776516-e9a2-4e01-a2a5-dee058eb2de6}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.41, ms:edgeOptions: {debuggerAddress: localhost:50442}, msedge: {msedgedriverVersion: 110.0.1587.57 (01109f626421..., userDataDir: C:\Users\YTACK\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50442/devtoo..., se:cdpVersion: 111.0.1661.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: msedge on WINDOWS (2b63bbc3297429657f8da604e9a95168)] -&gt; id: username]
+Session ID: 2b63bbc3297429657f8da604e9a95168
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:132)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.clear(Unknown Source)
+	at pageObjects.LoginPage.loginWith(LoginPage.java:40)
+	at pageObjects.LoginPage.loginAsAdmin(LoginPage.java:52)
+	at TestCollection.loginWithCorrectUsernameAndPassword(TestCollection.java:50)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
