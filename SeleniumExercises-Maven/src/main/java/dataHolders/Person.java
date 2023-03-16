@@ -1,3 +1,4 @@
+package dataHolders;
 /**
  * Data storage for the person Yannis.
  * Includes this persons properties.
