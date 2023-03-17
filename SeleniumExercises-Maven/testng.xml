@@ -19,4 +19,13 @@
 		  </class>
 	  </classes>
   </test> <!-- Test2 -->
+  <test name="CreateConnectionTest Success">
+	  <classes>
+		  <class name="TestCollection">
+			  <methods>
+				  <include name="createNewConnection"></include>
+			  </methods>
+		  </class>
+	  </classes>
+  </test> <!-- Test2 -->
 </suite> <!-- Suite -->

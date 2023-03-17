@@ -1,6 +1,7 @@
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import dataHolders.Person;
 import pageObjects.LoginPage;
 import pageObjects.MenuPage;
 import pageObjects.WelcomePage;
@@ -56,6 +57,16 @@ public class TestCollection {
 		Assert.assertTrue(login.loginAsAdmin()
 				.isWelcomeMessageShown(), "Welcome message is not displayed for correct login data");
 	}
-	  
+	
+	@Test
+	public void createNewConnection() {
+		LoginPage login = new LoginPage(DriverManager.getDriver());
+		Person p = new Person();
+		Assert.assertTrue(login.loginAsAdmin()
+				.navigateToNewConnectionPage()
+				.addConnection(p)
+				.isCreationFeedbackDisplayed(p));
+		
+	}
 	
 }

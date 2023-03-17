@@ -7,6 +7,7 @@
         <methods>
           <include name="beforeMethod"/>
           <include name="setup"/>
+          <include name="teardown"/>
           <include name="loginWithUsernameAndPassword" invocation-numbers="2"/>
         </methods>
       </class> <!-- TestCollection -->
@@ -18,6 +19,7 @@
         <methods>
           <include name="beforeMethod"/>
           <include name="setup"/>
+          <include name="teardown"/>
           <include name="loginWithCorrectUsernameAndPassword"/>
         </methods>
       </class> <!-- TestCollection -->

@@ -1,13 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.894 s <<< FAILURE! - in TestSuite
-TestCollection.loginWithUsernameAndPassword[admin, superduper](3)  Time elapsed: 0.201 s  <<< FAILURE!
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.716 s <<< FAILURE! - in TestSuite
+TestCollection.loginWithUsernameAndPassword[admin, superduper](3)  Time elapsed: 0.182 s  <<< FAILURE!
 java.lang.AssertionError: Welcome message is displayed for incorrect login data expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertFalse(Assert.java:78)
-	at TestCollection.loginWithUsernameAndPassword(TestCollection.java:42)
+	at TestCollection.loginWithUsernameAndPassword(TestCollection.java:49)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -46,10 +46,10 @@ element not interactable
 Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [2b63bbc3297429657f8da604e9a95168, clearElement {id=28776516-e9a2-4e01-a2a5-dee058eb2de6}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.41, ms:edgeOptions: {debuggerAddress: localhost:50442}, msedge: {msedgedriverVersion: 110.0.1587.57 (01109f626421..., userDataDir: C:\Users\YTACK\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50442/devtoo..., se:cdpVersion: 111.0.1661.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: msedge on WINDOWS (2b63bbc3297429657f8da604e9a95168)] -> id: username]
-Session ID: 2b63bbc3297429657f8da604e9a95168
+Command: [020dff2883d837e5143d3efbbf411c76, clearElement {id=78fe4a18-a3ad-4756-8fbf-3fa33176b3b6}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.41, ms:edgeOptions: {debuggerAddress: localhost:64022}, msedge: {msedgedriverVersion: 110.0.1587.57 (01109f626421..., userDataDir: C:\Users\YTACK\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64022/devtoo..., se:cdpVersion: 111.0.1661.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: msedge on WINDOWS (020dff2883d837e5143d3efbbf411c76)] -> id: username]
+Session ID: 020dff2883d837e5143d3efbbf411c76
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -65,10 +65,10 @@ Session ID: 2b63bbc3297429657f8da604e9a95168
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.clear(Unknown Source)
-	at pageObjects.LoginPage.loginWith(LoginPage.java:40)
-	at pageObjects.LoginPage.loginAsAdmin(LoginPage.java:52)
-	at TestCollection.loginWithCorrectUsernameAndPassword(TestCollection.java:50)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.clear(Unknown Source)
+	at pageObjects.LoginPage.loginWith(LoginPage.java:39)
+	at pageObjects.LoginPage.loginAsAdmin(LoginPage.java:51)
+	at TestCollection.loginWithCorrectUsernameAndPassword(TestCollection.java:57)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
