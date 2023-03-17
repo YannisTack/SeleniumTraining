@@ -14,7 +14,7 @@ public class MenuPage {
 	public MenuPage(WebDriver driver)
 	{
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(this.driver, this);
 	}
 	
 	public LoginPage logout() {

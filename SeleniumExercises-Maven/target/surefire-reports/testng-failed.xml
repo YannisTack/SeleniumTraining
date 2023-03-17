@@ -13,16 +13,16 @@
       </class> <!-- TestCollection -->
     </classes>
   </test> <!-- LoginTest Error(failed) -->
-  <test thread-count="5" name="LoginTest Success(failed)" verbose="0">
+  <test thread-count="5" name="CreateConnectionTest Success(failed)" verbose="0">
     <classes>
       <class name="TestCollection">
         <methods>
           <include name="beforeMethod"/>
+          <include name="createNewConnection"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="loginWithCorrectUsernameAndPassword"/>
         </methods>
       </class> <!-- TestCollection -->
     </classes>
-  </test> <!-- LoginTest Success(failed) -->
+  </test> <!-- CreateConnectionTest Success(failed) -->
 </suite> <!-- Failed suite [Login Test Suite] -->

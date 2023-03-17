@@ -29,13 +29,15 @@ public class NewConnectionPage {
 	private WebElement selSeniority;
 	@FindBy(id="add")
 	private WebElement btnAdd;
-	@FindBy(xpath="//p[@class='feedback']")
+	@FindBy(xpath="//div[@id='errors']//p[@class='feedback']")
 	private WebElement txtFeedback;
+	@FindBy(xpath="//a[text()='Stats']")
+	private WebElement btnNavigateToStats;
 	
 	public NewConnectionPage(WebDriver driver)
 	{
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(this.driver, this);
 	}
 	
 	public NewConnectionPage addConnection(Person p)
@@ -61,8 +63,14 @@ public class NewConnectionPage {
 	
 	public boolean isCreationFeedbackDisplayed(Person p)
 	{
-		return true;
+		//return true;
 		// TODO - Find out why txtFeedback cannot be found!
-		//return txtFeedback.getText().equals("Connection '" + p.getFirstName() + " " + p.getName() + " added.");
+		return txtFeedback.getText().equals("Connection '" + p.getFirstName() + " " + p.getName() + " added.");
+	}
+	
+	public StatsPage navigateToStatsPage()
+	{
+		btnNavigateToStats.click();
+		return new StatsPage(driver);
 	}
 }

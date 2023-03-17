@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Login_Test_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="loginWithCorrectUsernameAndPassword">loginWithCorrectUsernameAndPassword</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="createNewConnection">createNewConnection</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -122,7 +122,7 @@
                     <div class="method-list-content passed suite-Login_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="createNewConnection">createNewConnection</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCollection" class="method navigator-link" hash-for-method="loginWithCorrectUsernameAndPassword">loginWithCorrectUsernameAndPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -160,18 +160,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithCorrectUsernameAndPassword">
-                  </a> <!-- loginWithCorrectUsernameAndPassword -->
-                  <span class="method-name">loginWithCorrectUsernameAndPassword</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+                  <a name="createNewConnection">
+                  </a> <!-- createNewConnection -->
+                  <span class="method-name">createNewConnection</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;errors&apos;]//p[@class=&apos;feedback&apos;]&quot;}
   (Session info: MicrosoftEdge=111.0.1661.41)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [020dff2883d837e5143d3efbbf411c76, clearElement {id=78fe4a18-a3ad-4756-8fbf-3fa33176b3b6}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.41, ms:edgeOptions: {debuggerAddress: localhost:64022}, msedge: {msedgedriverVersion: 110.0.1587.57 (01109f626421..., userDataDir: C:\Users\YTACK\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64022/devtoo..., se:cdpVersion: 111.0.1661.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: msedge on WINDOWS (020dff2883d837e5143d3efbbf411c76)] -&gt; id: username]
-Session ID: 020dff2883d837e5143d3efbbf411c76
+Command: [9277bb100b8f193ca30452062b1f2586, findElement {using=xpath, value=//div[@id=&apos;errors&apos;]//p[@class=&apos;feedback&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.41, ms:edgeOptions: {debuggerAddress: localhost:57631}, msedge: {msedgedriverVersion: 110.0.1587.57 (01109f626421..., userDataDir: C:\Users\YTACK\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57631/devtoo..., se:cdpVersion: 111.0.1661.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9277bb100b8f193ca30452062b1f2586
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -179,15 +179,17 @@ Session ID: 020dff2883d837e5143d3efbbf411c76
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:132)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.clear(Unknown Source)
-	at pageObjects.LoginPage.loginWith(LoginPage.java:39)
-	at pageObjects.LoginPage.loginAsAdmin(LoginPage.java:51)
-	at TestCollection.loginWithCorrectUsernameAndPassword(TestCollection.java:57)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getText(Unknown Source)
+	at pageObjects.NewConnectionPage.isCreationFeedbackDisplayed(NewConnectionPage.java:68)
+	at TestCollection.createNewConnection(TestCollection.java:67)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 34 stack frames
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -214,9 +216,9 @@ Session ID: 020dff2883d837e5143d3efbbf411c76
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createNewConnection">
-                  </a> <!-- createNewConnection -->
-                  <span class="method-name">createNewConnection</span>
+                  <a name="loginWithCorrectUsernameAndPassword">
+                  </a> <!-- loginWithCorrectUsernameAndPassword -->
+                  <span class="method-name">loginWithCorrectUsernameAndPassword</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -329,27 +331,27 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createNewConnection')
 data.setCell(0, 2, 'TestCollection')
-data.setCell(0, 3, 753);
+data.setCell(0, 3, 776);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginWithUsernameAndPassword')
 data.setCell(1, 2, 'TestCollection')
-data.setCell(1, 3, 289);
+data.setCell(1, 3, 291);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginWithUsernameAndPassword')
 data.setCell(2, 2, 'TestCollection')
-data.setCell(2, 3, 181);
+data.setCell(2, 3, 200);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginWithUsernameAndPassword')
+data.setCell(3, 1, 'loginWithCorrectUsernameAndPassword')
 data.setCell(3, 2, 'TestCollection')
-data.setCell(3, 3, 175);
+data.setCell(3, 3, 193);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'loginWithUsernameAndPassword')
 data.setCell(4, 2, 'TestCollection')
-data.setCell(4, 3, 164);
+data.setCell(4, 3, 177);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'loginWithCorrectUsernameAndPassword')
+data.setCell(5, 1, 'loginWithUsernameAndPassword')
 data.setCell(5, 2, 'TestCollection')
-data.setCell(5, 3, 160);
+data.setCell(5, 3, 171);
 window.suiteTableData['Login_Test_Suite']= { tableData: data, tableDiv: 'times-div-Login_Test_Suite'}
 return data;
 }
@@ -369,21 +371,27 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Login_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">9 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">TestCollection</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
+                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
                 <br/>
                 <span class="ignored-method-name">createNewConnection</span>
                 <br/>
-                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
-                <br/>
                 <span class="ignored-method-name">createNewConnection</span>
+                <br/>
+                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
                 <br/>
                 <span class="ignored-method-name">loginWithUsernameAndPassword</span>
+                <br/>
+                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
+                <br/>
+                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
+                <br/>
+                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
                 <br/>
                 <span class="ignored-method-name">loginWithUsernameAndPassword</span>
                 <br/>
@@ -404,59 +412,59 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">2842 ms</span>
+                <span class="method-start">2790 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithUsernameAndPassword(admin, invalidPassword)</span>
-                <span class="method-start">2928 ms</span>
+                <span class="method-start">2889 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">3218 ms</span>
+                <span class="method-start">3183 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithUsernameAndPassword(invalidUser, superduper)</span>
-                <span class="method-start">3249 ms</span>
+                <span class="method-start">3231 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">3424 ms</span>
+                <span class="method-start">3409 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">loginWithUsernameAndPassword(admin, superduper)</span>
-                <span class="method-start">3454 ms</span>
+                <span class="method-start">3439 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">3639 ms</span>
+                <span class="method-start">3642 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithUsernameAndPassword(/, /)</span>
-                <span class="method-start">3672 ms</span>
+                <span class="method-start">3676 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">3876 ms</span>
+                <span class="method-start">3891 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginWithCorrectUsernameAndPassword</span>
+                <span class="method-start">3927 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">4131 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">loginWithCorrectUsernameAndPassword</span>
-                <span class="method-start">3912 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">4084 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <span class="method-name">createNewConnection</span>
-                <span class="method-start">4121 ms</span>
+                <span class="method-start">4174 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">4880 ms</span>
+                <span class="method-start">4965 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

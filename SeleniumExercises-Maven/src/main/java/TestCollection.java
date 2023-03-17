@@ -53,13 +53,23 @@ public class TestCollection {
 	@Test
 	public void loginWithCorrectUsernameAndPassword() {
 		LoginPage login = new LoginPage(DriverManager.getDriver());
-		login.loginAsAdmin();
 		Assert.assertTrue(login.loginAsAdmin()
 				.isWelcomeMessageShown(), "Welcome message is not displayed for correct login data");
 	}
 	
 	@Test
 	public void createNewConnection() {
+		LoginPage login = new LoginPage(DriverManager.getDriver());
+		Person p = new Person();
+		Assert.assertTrue(login.loginAsAdmin()
+				.navigateToNewConnectionPage()
+				.addConnection(p)
+				.isCreationFeedbackDisplayed(p));
+		
+	}
+	
+	@Test
+	public void createNewConnectionAndValidateStats() {
 		LoginPage login = new LoginPage(DriverManager.getDriver());
 		Person p = new Person();
 		Assert.assertTrue(login.loginAsAdmin()
