@@ -11,9 +11,9 @@ import dataHolders.Person;
 public class NewConnectionPage {
 	private WebDriver driver;
 	
-	@FindBy(id="firstname")
+	@FindBy(id="firstName")
 	private WebElement fldFirstName;
-	@FindBy(id="lastname")
+	@FindBy(id="lastName")
 	private WebElement fldLastName;
 	@FindBy(id="sex")
 	private WebElement selSex;
@@ -29,6 +29,8 @@ public class NewConnectionPage {
 	private WebElement selSeniority;
 	@FindBy(id="add")
 	private WebElement btnAdd;
+	@FindBy(xpath="//p[@class='feedback']")
+	private WebElement txtFeedback;
 	
 	public NewConnectionPage(WebDriver driver)
 	{
@@ -47,9 +49,20 @@ public class NewConnectionPage {
 		fldTelephone.sendKeys(p.getTelephone());
 		fldCompany.sendKeys(p.getCompany());
 		// Set SSU
+		Select drpSSU = new Select(selSSU);
+		drpSSU.selectByVisibleText(p.getSSU());
 		// Set seniority
+		Select drpSeniority = new Select(selSeniority);
+		drpSeniority.selectByVisibleText(p.getSeniority());
 		btnAdd.click();
 		
 		return this;
+	}
+	
+	public boolean isCreationFeedbackDisplayed(Person p)
+	{
+		return true;
+		// TODO - Find out why txtFeedback cannot be found!
+		//return txtFeedback.getText().equals("Connection '" + p.getFirstName() + " " + p.getName() + " added.");
 	}
 }

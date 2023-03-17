@@ -25,6 +25,9 @@ public class WelcomePage {
 	@FindBy (xpath = "//a[@href='admin.html']")
 	private WebElement btnAdmin;
 	
+	@FindBy (id = "crudConnection")
+	private WebElement btnNewConnection;
+	
 	public WelcomePage(WebDriver driver)
 	{
 		this.driver = driver;
@@ -56,5 +59,10 @@ public class WelcomePage {
 	public boolean isWelcomeMessageShown() {
 		System.out.println("Bool: " + txtWelcomeMessageContent1.isDisplayed());
 		return txtWelcomeMessageContent1.isDisplayed();
+	}
+	
+	public NewConnectionPage navigateToNewConnectionPage() {
+		btnNewConnection.click();
+		return new NewConnectionPage(driver);
 	}
 }

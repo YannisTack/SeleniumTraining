@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="7" passed="3" failed="2" skipped="0">
+<testng-results ignored="6" total="12" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-16T23:04:05 CET" name="Login Test Suite" finished-at="2023-03-16T23:04:07 CET" duration-ms="1332">
+  <suite started-at="2023-03-17T10:37:28 CET" name="Login Test Suite" finished-at="2023-03-17T10:37:30 CET" duration-ms="2055">
     <groups>
     </groups>
-    <test started-at="2023-03-16T23:04:05 CET" name="LoginTest Error" finished-at="2023-03-16T23:04:07 CET" duration-ms="1095">
+    <test started-at="2023-03-17T10:37:28 CET" name="LoginTest Error" finished-at="2023-03-17T10:37:29 CET" duration-ms="1019">
       <class name="TestCollection">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@8dbdac1]" started-at="2023-03-16T23:04:05 CET" name="beforeMethod" finished-at="2023-03-16T23:04:06 CET" duration-ms="89" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@3ce1e309]" started-at="2023-03-17T10:37:28 CET" name="beforeMethod" finished-at="2023-03-17T10:37:28 CET" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@8dbdac1]" started-at="2023-03-16T23:04:06 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-16T23:04:06 CET" duration-ms="307" status="PASS">
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@3ce1e309]" started-at="2023-03-17T10:37:28 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-17T10:37:29 CET" duration-ms="289" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithUsernameAndPassword -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@8dbdac1]" started-at="2023-03-16T23:04:06 CET" name="beforeMethod" finished-at="2023-03-16T23:04:06 CET" duration-ms="34" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@3ce1e309]" started-at="2023-03-17T10:37:29 CET" name="beforeMethod" finished-at="2023-03-17T10:37:29 CET" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@8dbdac1]" started-at="2023-03-16T23:04:06 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-16T23:04:06 CET" duration-ms="176" status="PASS">
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@3ce1e309]" started-at="2023-03-17T10:37:29 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-17T10:37:29 CET" duration-ms="175" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,11 +47,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithUsernameAndPassword -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@8dbdac1]" started-at="2023-03-16T23:04:06 CET" name="beforeMethod" finished-at="2023-03-16T23:04:06 CET" duration-ms="40" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@3ce1e309]" started-at="2023-03-17T10:37:29 CET" name="beforeMethod" finished-at="2023-03-17T10:37:29 CET" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@8dbdac1]" started-at="2023-03-16T23:04:06 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-16T23:04:06 CET" duration-ms="200" status="FAIL">
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@3ce1e309]" started-at="2023-03-17T10:37:29 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-17T10:37:29 CET" duration-ms="181" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -73,7 +73,7 @@
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertFalse(Assert.java:78)
-at TestCollection.loginWithUsernameAndPassword(TestCollection.java:42)
+at TestCollection.loginWithUsernameAndPassword(TestCollection.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -110,11 +110,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithUsernameAndPassword -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@8dbdac1]" started-at="2023-03-16T23:04:06 CET" name="beforeMethod" finished-at="2023-03-16T23:04:06 CET" duration-ms="37" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@3ce1e309]" started-at="2023-03-17T10:37:29 CET" name="beforeMethod" finished-at="2023-03-17T10:37:29 CET" duration-ms="33" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@8dbdac1]" started-at="2023-03-16T23:04:06 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-16T23:04:07 CET" duration-ms="167" status="PASS">
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@3ce1e309]" started-at="2023-03-17T10:37:29 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-17T10:37:29 CET" duration-ms="164" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -132,17 +132,13 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
         </test-method> <!-- loginWithUsernameAndPassword -->
       </class> <!-- TestCollection -->
     </test> <!-- LoginTest Error -->
-    <test started-at="2023-03-16T23:04:07 CET" name="LoginTest Success" finished-at="2023-03-16T23:04:07 CET" duration-ms="199">
+    <test started-at="2023-03-17T10:37:29 CET" name="LoginTest Success" finished-at="2023-03-17T10:37:30 CET" duration-ms="197">
       <class name="TestCollection">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCollection@7e07db1f]" started-at="2023-03-16T23:03:58 CET" name="setup" finished-at="2023-03-16T23:04:05 CET" duration-ms="6985" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@7e07db1f]" started-at="2023-03-16T23:04:07 CET" name="beforeMethod" finished-at="2023-03-16T23:04:07 CET" duration-ms="37" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@564fabc8]" started-at="2023-03-17T10:37:29 CET" name="beforeMethod" finished-at="2023-03-17T10:37:29 CET" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithCorrectUsernameAndPassword()[pri:0, instance:TestCollection@7e07db1f]" started-at="2023-03-16T23:04:07 CET" name="loginWithCorrectUsernameAndPassword" finished-at="2023-03-16T23:04:07 CET" duration-ms="158" status="FAIL">
+        <test-method signature="loginWithCorrectUsernameAndPassword()[pri:0, instance:TestCollection@564fabc8]" started-at="2023-03-17T10:37:29 CET" name="loginWithCorrectUsernameAndPassword" finished-at="2023-03-17T10:37:30 CET" duration-ms="160" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
@@ -150,10 +146,10 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [2b63bbc3297429657f8da604e9a95168, clearElement {id=28776516-e9a2-4e01-a2a5-dee058eb2de6}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.41, ms:edgeOptions: {debuggerAddress: localhost:50442}, msedge: {msedgedriverVersion: 110.0.1587.57 (01109f626421..., userDataDir: C:\Users\YTACK\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50442/devtoo..., se:cdpVersion: 111.0.1661.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: msedge on WINDOWS (2b63bbc3297429657f8da604e9a95168)] -> id: username]
-Session ID: 2b63bbc3297429657f8da604e9a95168]]>
+Command: [020dff2883d837e5143d3efbbf411c76, clearElement {id=78fe4a18-a3ad-4756-8fbf-3fa33176b3b6}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.41, ms:edgeOptions: {debuggerAddress: localhost:64022}, msedge: {msedgedriverVersion: 110.0.1587.57 (01109f626421..., userDataDir: C:\Users\YTACK\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64022/devtoo..., se:cdpVersion: 111.0.1661.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: msedge on WINDOWS (020dff2883d837e5143d3efbbf411c76)] -> id: username]
+Session ID: 020dff2883d837e5143d3efbbf411c76]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
@@ -161,10 +157,10 @@ Session ID: 2b63bbc3297429657f8da604e9a95168]]>
 Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [2b63bbc3297429657f8da604e9a95168, clearElement {id=28776516-e9a2-4e01-a2a5-dee058eb2de6}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.41, ms:edgeOptions: {debuggerAddress: localhost:50442}, msedge: {msedgedriverVersion: 110.0.1587.57 (01109f626421..., userDataDir: C:\Users\YTACK\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50442/devtoo..., se:cdpVersion: 111.0.1661.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: msedge on WINDOWS (2b63bbc3297429657f8da604e9a95168)] -> id: username]
-Session ID: 2b63bbc3297429657f8da604e9a95168
+Command: [020dff2883d837e5143d3efbbf411c76, clearElement {id=78fe4a18-a3ad-4756-8fbf-3fa33176b3b6}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.41, ms:edgeOptions: {debuggerAddress: localhost:64022}, msedge: {msedgedriverVersion: 110.0.1587.57 (01109f626421..., userDataDir: C:\Users\YTACK\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64022/devtoo..., se:cdpVersion: 111.0.1661.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: msedge on WINDOWS (020dff2883d837e5143d3efbbf411c76)] -> id: username]
+Session ID: 020dff2883d837e5143d3efbbf411c76
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -180,10 +176,10 @@ at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:132)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy14.clear(Unknown Source)
-at pageObjects.LoginPage.loginWith(LoginPage.java:40)
-at pageObjects.LoginPage.loginAsAdmin(LoginPage.java:52)
-at TestCollection.loginWithCorrectUsernameAndPassword(TestCollection.java:50)
+at jdk.proxy2/jdk.proxy2.$Proxy15.clear(Unknown Source)
+at pageObjects.LoginPage.loginWith(LoginPage.java:39)
+at pageObjects.LoginPage.loginAsAdmin(LoginPage.java:51)
+at TestCollection.loginWithCorrectUsernameAndPassword(TestCollection.java:57)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -222,5 +218,25 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
         </test-method> <!-- loginWithCorrectUsernameAndPassword -->
       </class> <!-- TestCollection -->
     </test> <!-- LoginTest Success -->
+    <test started-at="2023-03-17T10:37:30 CET" name="CreateConnectionTest Success" finished-at="2023-03-17T10:37:30 CET" duration-ms="791">
+      <class name="TestCollection">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCollection@1d2adfbe]" started-at="2023-03-17T10:37:26 CET" name="setup" finished-at="2023-03-17T10:37:28 CET" duration-ms="2819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@1d2adfbe]" started-at="2023-03-17T10:37:30 CET" name="beforeMethod" finished-at="2023-03-17T10:37:30 CET" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="createNewConnection()[pri:0, instance:TestCollection@1d2adfbe]" started-at="2023-03-17T10:37:30 CET" name="createNewConnection" finished-at="2023-03-17T10:37:30 CET" duration-ms="753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewConnection -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCollection@1d2adfbe]" started-at="2023-03-17T10:37:30 CET" name="teardown" finished-at="2023-03-17T10:37:31 CET" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCollection -->
+    </test> <!-- CreateConnectionTest Success -->
   </suite> <!-- Login Test Suite -->
 </testng-results>
