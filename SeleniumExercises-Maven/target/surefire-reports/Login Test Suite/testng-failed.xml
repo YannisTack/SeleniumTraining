@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Login Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="LoginTest Error(failed)" verbose="0">
+  <test thread-count="5" name="Create connection and validate stats(failed)" verbose="0">
     <classes>
       <class name="TestCollection">
         <methods>
           <include name="beforeMethod"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="loginWithUsernameAndPassword" invocation-numbers="2"/>
+          <include name="createNewConnectionAndValidateStats"/>
         </methods>
       </class> <!-- TestCollection -->
     </classes>
-  </test> <!-- LoginTest Error(failed) -->
-  <test thread-count="5" name="CreateConnectionTest Success(failed)" verbose="0">
-    <classes>
-      <class name="TestCollection">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="createNewConnection"/>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- TestCollection -->
-    </classes>
-  </test> <!-- CreateConnectionTest Success(failed) -->
+  </test> <!-- Create connection and validate stats(failed) -->
 </suite> <!-- Failed suite [Login Test Suite] -->

@@ -25,6 +25,7 @@ public class StatsPage {
 	
 	public String getTableCellText(int row, int col)
 	{
+		System.out.println("Returning cell text for stat '" + statsTable.getText(row, 0) + "'= " + statsTable.getText(row, col));
 		return statsTable.getText(row, col);
 	}
 	

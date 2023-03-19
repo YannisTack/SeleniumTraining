@@ -4,6 +4,7 @@ import org.testng.asserts.SoftAssert;
 import dataHolders.Person;
 import pageObjects.LoginPage;
 import pageObjects.MenuPage;
+import pageObjects.StatsPage;
 import pageObjects.WelcomePage;
 import utils.DriverManager;
 
@@ -39,7 +40,7 @@ public class TestCollection {
 		return new Object[][] {
 			{"admin", "invalidPassword"},
 			{"invalidUser", "superduper"},
-			{"admin", "superduper"},
+			{"admin", "Superduper"},
 			{"/", "/"},
 		};
 	}
@@ -72,11 +73,13 @@ public class TestCollection {
 	public void createNewConnectionAndValidateStats() {
 		LoginPage login = new LoginPage(DriverManager.getDriver());
 		Person p = new Person();
-		Assert.assertTrue(login.loginAsAdmin()
-				.navigateToNewConnectionPage()
-				.addConnection(p)
-				.isCreationFeedbackDisplayed(p));
+		StatsPage stats = login.loginAsAdmin().navigateToNewConnectionPage().addConnection(p).navigateToStatsPage();
 		
+		System.out.println("Validating table row count.");
+		Assert.assertTrue(stats.getTableRowCount() == 11);
+		
+		System.out.println("Validating testing stat cell.");
+		Assert.assertTrue(stats.getTableCellText(4, 2).equals("2"));
 	}
 	
 }

@@ -48,6 +48,7 @@ public class NewConnectionPage {
 		Select drpSex = new Select(selSex);
 		drpSex.selectByVisibleText(p.getSex());
 		fldEmail.sendKeys(p.getEmail());
+		fldTelephone.click();
 		fldTelephone.sendKeys(p.getTelephone());
 		fldCompany.sendKeys(p.getCompany());
 		// Set SSU
@@ -64,8 +65,8 @@ public class NewConnectionPage {
 	public boolean isCreationFeedbackDisplayed(Person p)
 	{
 		//return true;
-		// TODO - Find out why txtFeedback cannot be found!
-		return txtFeedback.getText().equals("Connection '" + p.getFirstName() + " " + p.getName() + " added.");
+		System.out.println("Validating feedback text: " + txtFeedback.getText());
+		return txtFeedback.getText().equals("Connection '" + p.getFirstName() + " " + p.getName() + "' added.");
 	}
 	
 	public StatsPage navigateToStatsPage()
