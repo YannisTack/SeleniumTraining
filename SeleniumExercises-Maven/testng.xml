@@ -28,4 +28,13 @@
 		  </class>
 	  </classes>
   </test> <!-- Test2 -->
+  <test name="Create connection and validate stats">
+	  <classes>
+		  <class name="TestCollection">
+			  <methods>
+				  <include name="createNewConnectionAndValidateStats"></include>
+			  </methods>
+		  </class>
+	  </classes>
+  </test>
 </suite> <!-- Suite -->

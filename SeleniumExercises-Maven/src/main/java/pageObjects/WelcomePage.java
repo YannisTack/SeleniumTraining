@@ -31,7 +31,7 @@ public class WelcomePage {
 	public WelcomePage(WebDriver driver)
 	{
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(this.driver, this);
 	}
 	
 	public String[] getWelcomeMessage( ) {
