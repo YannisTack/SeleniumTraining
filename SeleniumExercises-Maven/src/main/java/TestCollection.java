@@ -2,15 +2,21 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import dataHolders.Person;
+import pageObjects.ConnectionsPage;
 import pageObjects.LoginPage;
 import pageObjects.MenuPage;
 import pageObjects.StatsPage;
 import pageObjects.WelcomePage;
+import utils.ChildAvailable;
 import utils.DriverManager;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+
+import java.time.Duration;
+
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -92,6 +98,18 @@ public class TestCollection {
 			.getTableCellText(0, 2).equals("N/A"), "Not all connections are reset.");
 		
 		
+	}
+	
+	@Test
+	public void expectedConditionTest() {
+		LoginPage login = new LoginPage(DriverManager.getDriver());
+		Person p = new Person();
+		Assert.assertTrue(login.loginAsAdmin()
+			.navigateToNewConnectionPage()
+			.addConnection(p)
+			.navigateToConnectionsPage()
+			.searchByLastName(p.getName())
+			.isConnectionAdded(p), "The new connection was not found");
 	}
 	
 }
