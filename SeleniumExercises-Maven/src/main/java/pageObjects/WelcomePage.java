@@ -28,6 +28,9 @@ public class WelcomePage {
 	@FindBy (id = "crudConnection")
 	private WebElement btnNewConnection;
 	
+	@FindBy (xpath = "//a[text()='Connections']")
+	private WebElement btnConnections;
+	
 	public WelcomePage(WebDriver driver)
 	{
 		this.driver = driver;
@@ -64,5 +67,10 @@ public class WelcomePage {
 	public NewConnectionPage navigateToNewConnectionPage() {
 		btnNewConnection.click();
 		return new NewConnectionPage(driver);
+	}
+	
+	public ConnectionsPage navigateToConnectionsPage() {
+		btnConnections.click();
+		return new ConnectionsPage(driver);
 	}
 }
