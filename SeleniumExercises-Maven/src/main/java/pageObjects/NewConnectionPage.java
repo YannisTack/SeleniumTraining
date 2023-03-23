@@ -33,6 +33,8 @@ public class NewConnectionPage {
 	private WebElement txtFeedback;
 	@FindBy(xpath="//a[text()='Stats']")
 	private WebElement btnNavigateToStats;
+	@FindBy (xpath = "//a[text()='Connections']")
+	private WebElement btnConnections;
 	
 	public NewConnectionPage(WebDriver driver)
 	{
@@ -73,5 +75,10 @@ public class NewConnectionPage {
 	{
 		btnNavigateToStats.click();
 		return new StatsPage(driver);
+	}
+	
+	public ConnectionsPage navigateToConnectionsPage() {
+		btnConnections.click();
+		return new ConnectionsPage(driver);
 	}
 }

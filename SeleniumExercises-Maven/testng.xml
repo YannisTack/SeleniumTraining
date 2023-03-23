@@ -46,4 +46,13 @@
 		  </class>
 	  </classes>
   </test>
+  <test name="Add new connection and wait for validation">
+	  <classes>
+		  <class name="TestCollection">
+			  <methods>
+				  <include name="expectedConditionTest"></include>
+			  </methods>
+		  </class>
+	  </classes>
+  </test>
 </suite> <!-- Suite -->
