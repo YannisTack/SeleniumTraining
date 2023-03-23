@@ -82,4 +82,16 @@ public class TestCollection {
 		Assert.assertTrue(stats.getTableCellText(4, 2).equals("2"));
 	}
 	
+	@Test
+	public void javaScriptTest() {
+		LoginPage login = new LoginPage(DriverManager.getDriver());
+		Assert.assertTrue(login.loginAsAdmin()
+			.navigateToConnectionsPage()
+			.resetConnections()
+			.navigateToStatsPage()
+			.getTableCellText(0, 2).equals("N/A"), "Not all connections are reset.");
+		
+		
+	}
+	
 }

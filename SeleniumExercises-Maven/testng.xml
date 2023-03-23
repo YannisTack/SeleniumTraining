@@ -37,4 +37,13 @@
 		  </class>
 	  </classes>
   </test>
+  <test name="Reset and repopulate using javascript">
+	  <classes>
+		  <class name="TestCollection">
+			  <methods>
+				  <include name="javaScriptTest"></include>
+			  </methods>
+		  </class>
+	  </classes>
+  </test>
 </suite> <!-- Suite -->
