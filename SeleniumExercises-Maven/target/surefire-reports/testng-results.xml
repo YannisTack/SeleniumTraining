@@ -2,16 +2,23 @@
 <testng-results ignored="30" total="39" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-23T22:41:57 CET" name="Login Test Suite" finished-at="2023-03-23T22:42:01 CET" duration-ms="4644">
+  <suite started-at="2023-03-24T09:54:48 CET" name="Login Test Suite" finished-at="2023-03-24T09:54:55 CET" duration-ms="6873">
     <groups>
     </groups>
-    <test started-at="2023-03-23T22:41:57 CET" name="LoginTest Error" finished-at="2023-03-23T22:41:58 CET" duration-ms="997">
+    <test started-at="2023-03-24T09:54:48 CET" name="LoginTest Error" finished-at="2023-03-24T09:54:50 CET" duration-ms="2279">
       <class name="TestCollection">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@74e52303]" started-at="2023-03-23T22:41:57 CET" name="beforeMethod" finished-at="2023-03-23T22:41:57 CET" duration-ms="83" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCollection@79924b]" started-at="2023-03-24T09:54:48 CET" name="beforeMethod" finished-at="2023-03-24T09:54:48 CET" duration-ms="127" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCollection.loginWithUsernameAndPassword(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@74e52303]" started-at="2023-03-23T22:41:57 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-23T22:41:57 CET" duration-ms="274" status="PASS">
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@79924b]" started-at="2023-03-24T09:54:48 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-24T09:54:49 CET" duration-ms="615" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,11 +34,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithUsernameAndPassword -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@74e52303]" started-at="2023-03-23T22:41:57 CET" name="beforeMethod" finished-at="2023-03-23T22:41:57 CET" duration-ms="35" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCollection@79924b]" started-at="2023-03-24T09:54:49 CET" name="beforeMethod" finished-at="2023-03-24T09:54:49 CET" duration-ms="48" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCollection.loginWithUsernameAndPassword(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@74e52303]" started-at="2023-03-23T22:41:57 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-23T22:41:57 CET" duration-ms="176" status="PASS">
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@79924b]" started-at="2023-03-24T09:54:49 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-24T09:54:49 CET" duration-ms="463" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,11 +61,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithUsernameAndPassword -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@74e52303]" started-at="2023-03-23T22:41:57 CET" name="beforeMethod" finished-at="2023-03-23T22:41:57 CET" duration-ms="32" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCollection@79924b]" started-at="2023-03-24T09:54:49 CET" name="beforeMethod" finished-at="2023-03-24T09:54:49 CET" duration-ms="35" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCollection.loginWithUsernameAndPassword(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@74e52303]" started-at="2023-03-23T22:41:57 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-23T22:41:57 CET" duration-ms="167" status="PASS">
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@79924b]" started-at="2023-03-24T09:54:49 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-24T09:54:50 CET" duration-ms="426" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -67,11 +88,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithUsernameAndPassword -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@74e52303]" started-at="2023-03-23T22:41:57 CET" name="beforeMethod" finished-at="2023-03-23T22:41:58 CET" duration-ms="28" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCollection@79924b]" started-at="2023-03-24T09:54:50 CET" name="beforeMethod" finished-at="2023-03-24T09:54:50 CET" duration-ms="42" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCollection.loginWithUsernameAndPassword(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@74e52303]" started-at="2023-03-23T22:41:58 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-23T22:41:58 CET" duration-ms="171" status="PASS">
+        <test-method signature="loginWithUsernameAndPassword(java.lang.String,java.lang.String)[pri:0, instance:TestCollection@79924b]" started-at="2023-03-24T09:54:50 CET" name="loginWithUsernameAndPassword" data-provider="LoginTest Error" finished-at="2023-03-24T09:54:50 CET" duration-ms="484" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,69 +117,104 @@
         </test-method> <!-- loginWithUsernameAndPassword -->
       </class> <!-- TestCollection -->
     </test> <!-- LoginTest Error -->
-    <test started-at="2023-03-23T22:41:58 CET" name="LoginTest Success" finished-at="2023-03-23T22:41:58 CET" duration-ms="225">
+    <test started-at="2023-03-24T09:54:50 CET" name="LoginTest Success" finished-at="2023-03-24T09:54:51 CET" duration-ms="284">
       <class name="TestCollection">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@1d2adfbe]" started-at="2023-03-23T22:41:58 CET" name="beforeMethod" finished-at="2023-03-23T22:41:58 CET" duration-ms="40" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCollection@1a482e36]" started-at="2023-03-24T09:54:50 CET" name="beforeMethod" finished-at="2023-03-24T09:54:50 CET" duration-ms="58" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCollection.loginWithCorrectUsernameAndPassword()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithCorrectUsernameAndPassword()[pri:0, instance:TestCollection@1d2adfbe]" started-at="2023-03-23T22:41:58 CET" name="loginWithCorrectUsernameAndPassword" finished-at="2023-03-23T22:41:58 CET" duration-ms="184" status="PASS">
+        <test-method signature="loginWithCorrectUsernameAndPassword()[pri:0, instance:TestCollection@1a482e36]" started-at="2023-03-24T09:54:50 CET" name="loginWithCorrectUsernameAndPassword" finished-at="2023-03-24T09:54:51 CET" duration-ms="223" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithCorrectUsernameAndPassword -->
       </class> <!-- TestCollection -->
     </test> <!-- LoginTest Success -->
-    <test started-at="2023-03-23T22:41:58 CET" name="CreateConnectionTest Success" finished-at="2023-03-23T22:41:59 CET" duration-ms="1070">
+    <test started-at="2023-03-24T09:54:51 CET" name="CreateConnectionTest Success" finished-at="2023-03-24T09:54:52 CET" duration-ms="1061">
       <class name="TestCollection">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@8f4ea7c]" started-at="2023-03-23T22:41:58 CET" name="beforeMethod" finished-at="2023-03-23T22:41:58 CET" duration-ms="41" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCollection@2f9f7dcf]" started-at="2023-03-24T09:54:51 CET" name="beforeMethod" finished-at="2023-03-24T09:54:51 CET" duration-ms="44" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCollection.createNewConnection()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="createNewConnection()[pri:0, instance:TestCollection@8f4ea7c]" started-at="2023-03-23T22:41:58 CET" name="createNewConnection" finished-at="2023-03-23T22:41:59 CET" duration-ms="1028" status="PASS">
+        <test-method signature="createNewConnection()[pri:0, instance:TestCollection@2f9f7dcf]" started-at="2023-03-24T09:54:51 CET" name="createNewConnection" finished-at="2023-03-24T09:54:52 CET" duration-ms="1015" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewConnection -->
       </class> <!-- TestCollection -->
     </test> <!-- CreateConnectionTest Success -->
-    <test started-at="2023-03-23T22:41:59 CET" name="Create connection and validate stats" finished-at="2023-03-23T22:42:00 CET" duration-ms="997">
+    <test started-at="2023-03-24T09:54:52 CET" name="Create connection and validate stats" finished-at="2023-03-24T09:54:53 CET" duration-ms="1323">
       <class name="TestCollection">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@10e31a9a]" started-at="2023-03-23T22:41:59 CET" name="beforeMethod" finished-at="2023-03-23T22:41:59 CET" duration-ms="63" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCollection@55183b20]" started-at="2023-03-24T09:54:52 CET" name="beforeMethod" finished-at="2023-03-24T09:54:52 CET" duration-ms="68" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCollection.createNewConnectionAndValidateStats()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="createNewConnectionAndValidateStats()[pri:0, instance:TestCollection@10e31a9a]" started-at="2023-03-23T22:41:59 CET" name="createNewConnectionAndValidateStats" finished-at="2023-03-23T22:42:00 CET" duration-ms="932" status="PASS">
+        <test-method signature="createNewConnectionAndValidateStats()[pri:0, instance:TestCollection@55183b20]" started-at="2023-03-24T09:54:52 CET" name="createNewConnectionAndValidateStats" finished-at="2023-03-24T09:54:53 CET" duration-ms="1254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewConnectionAndValidateStats -->
       </class> <!-- TestCollection -->
     </test> <!-- Create connection and validate stats -->
-    <test started-at="2023-03-23T22:42:00 CET" name="Reset and repopulate using javascript" finished-at="2023-03-23T22:42:00 CET" duration-ms="375">
+    <test started-at="2023-03-24T09:54:53 CET" name="Reset and repopulate using javascript" finished-at="2023-03-24T09:54:53 CET" duration-ms="460">
       <class name="TestCollection">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@7f3b84b8]" started-at="2023-03-23T22:42:00 CET" name="beforeMethod" finished-at="2023-03-23T22:42:00 CET" duration-ms="37" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCollection@130d63be]" started-at="2023-03-24T09:54:53 CET" name="beforeMethod" finished-at="2023-03-24T09:54:53 CET" duration-ms="40" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCollection.javaScriptTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="javaScriptTest()[pri:0, instance:TestCollection@7f3b84b8]" started-at="2023-03-23T22:42:00 CET" name="javaScriptTest" finished-at="2023-03-23T22:42:00 CET" duration-ms="335" status="PASS">
+        <test-method signature="javaScriptTest()[pri:0, instance:TestCollection@130d63be]" started-at="2023-03-24T09:54:53 CET" name="javaScriptTest" finished-at="2023-03-24T09:54:53 CET" duration-ms="419" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- javaScriptTest -->
       </class> <!-- TestCollection -->
     </test> <!-- Reset and repopulate using javascript -->
-    <test started-at="2023-03-23T22:42:00 CET" name="Add new connection and wait for validation" finished-at="2023-03-23T22:42:01 CET" duration-ms="905">
+    <test started-at="2023-03-24T09:54:53 CET" name="Add new connection and wait for validation" finished-at="2023-03-24T09:54:55 CET" duration-ms="1365">
       <class name="TestCollection">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCollection@5c33f1a9]" started-at="2023-03-23T22:41:54 CET" name="setup" finished-at="2023-03-23T22:41:57 CET" duration-ms="3041" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCollection@1283bb96]" started-at="2023-03-24T09:54:41 CET" name="setup" finished-at="2023-03-24T09:54:48 CET" duration-ms="6717" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCollection@5c33f1a9]" started-at="2023-03-23T22:42:00 CET" name="beforeMethod" finished-at="2023-03-23T22:42:00 CET" duration-ms="32" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCollection@1283bb96]" started-at="2023-03-24T09:54:53 CET" name="beforeMethod" finished-at="2023-03-24T09:54:54 CET" duration-ms="42" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCollection.expectedConditionTest()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="expectedConditionTest()[pri:0, instance:TestCollection@5c33f1a9]" started-at="2023-03-23T22:42:00 CET" name="expectedConditionTest" finished-at="2023-03-23T22:42:01 CET" duration-ms="873" status="PASS">
+        <test-method signature="expectedConditionTest()[pri:0, instance:TestCollection@1283bb96]" started-at="2023-03-24T09:54:54 CET" name="expectedConditionTest" finished-at="2023-03-24T09:54:55 CET" duration-ms="1321" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- expectedConditionTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCollection@5c33f1a9]" started-at="2023-03-23T22:42:01 CET" name="teardown" finished-at="2023-03-23T22:42:02 CET" duration-ms="311" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestCollection@1283bb96]" started-at="2023-03-24T09:54:55 CET" name="teardown" finished-at="2023-03-24T09:54:56 CET" duration-ms="840" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

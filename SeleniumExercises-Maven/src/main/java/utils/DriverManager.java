@@ -55,4 +55,10 @@ public class DriverManager {
 		eDriver = new EventFiringWebDriver(getDriver());
 		eDriver.register(new EListener());
 	}
+	
+	public static void setEdgeEDriver() {
+		System.setProperty("webdriver.edge.driver", "C:\\Users\\YTACK\\Documents\\SeleniumWebDrivers\\msedgedriver.exe");
+		eDriver = new EventFiringWebDriver(getDriver());
+		eDriver.register(new EListener());
+	}
 }
