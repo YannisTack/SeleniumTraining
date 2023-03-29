@@ -3,7 +3,7 @@
 <suite name="Login Test Suite">
   <test thread-count="5" name="LoginTest Error">
     <classes>
-      <class name="TestCollection">
+      <class name="TestCases.TestCollection">
       	<methods>
 			  <include name ="loginWithUsernameAndPassword"/>
 		</methods>
@@ -12,7 +12,7 @@
   </test> <!-- Test1 -->
   <test name="LoginTest Success">
 	  <classes>
-		  <class name="TestCollection">
+		  <class name="TestCases.TestCollection">
 			  <methods>
 				  <include name="loginWithCorrectUsernameAndPassword"></include>
 			  </methods>
@@ -21,7 +21,7 @@
   </test> <!-- Test2 -->
   <test name="CreateConnectionTest Success">
 	  <classes>
-		  <class name="TestCollection">
+		  <class name="TestCases.TestCollection">
 			  <methods>
 				  <include name="createNewConnection"></include>
 			  </methods>
@@ -30,7 +30,7 @@
   </test> <!-- Test2 -->
   <test name="Create connection and validate stats">
 	  <classes>
-		  <class name="TestCollection">
+		  <class name="TestCases.TestCollection">
 			  <methods>
 				  <include name="createNewConnectionAndValidateStats"></include>
 			  </methods>
@@ -39,7 +39,7 @@
   </test>
   <test name="Reset and repopulate using javascript">
 	  <classes>
-		  <class name="TestCollection">
+		  <class name="TestCases.TestCollection">
 			  <methods>
 				  <include name="javaScriptTest"></include>
 			  </methods>
@@ -48,7 +48,7 @@
   </test>
   <test name="Add new connection and wait for validation">
 	  <classes>
-		  <class name="TestCollection">
+		  <class name="TestCases.TestCollection">
 			  <methods>
 				  <include name="expectedConditionTest"></include>
 			  </methods>
