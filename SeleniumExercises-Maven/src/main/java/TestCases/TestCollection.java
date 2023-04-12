@@ -20,12 +20,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
+import java.io.File;
 import java.lang.reflect.Method;
 import java.time.Duration;
 
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -39,14 +41,18 @@ public class TestCollection {
 	@BeforeSuite
 	public static void setup() {
 		  DriverManager.getEDriver().get("https://satrngselcypr.z16.web.core.windows.net/");
-		  report = new ExtentReports(System.getProperty("user.dir") + "ExtentReportResults.html", true);
+		  report = new ExtentReports(System.getProperty("user.dir") + File.separator + "test-output" + File.separator + "ExtentReportResults.html", true);
 	  }
 	
 	@AfterSuite
-	public static void teardown() {
+	public static void finalization() {
 		DriverManager.killDriver();
-		report.endTest(test);
 		report.flush();
+	}
+	
+	@AfterMethod
+	public static void teardown() {
+		report.endTest(test);
 	}
 	  
 	@BeforeMethod
@@ -67,19 +73,19 @@ public class TestCollection {
 			{"admin", "superduper"},
 		};
 	}
-	@Test(dataProvider = "LoginTest Error")
+	@Test(dataProvider = "LoginTest Error", testName = "Login with various username/psw combinations")
 	public void loginWithUsernameAndPassword(String username, String password) {
 		LoginPage login = new LoginPage(DriverManager.getEDriver());
-//		Assert.assertFalse(login.loginWith(username, password)
-//				.isWelcomeMessageShown(), "Welcome message is displayed for incorrect login data");
-		Boolean result = login.loginWith(username, password)
-				.isWelcomeMessageShown();
-		
-		if (!result) {
-			test.log(LogStatus.PASS, "Login with " + username + " - " + password, "User could not log in.");
-		} else {
-			test.log(LogStatus.FAIL, "Login with " + username + " - " + password, "Invalid user could log in.");
-		}
+		Assert.assertFalse(login.loginWith(username, password)
+				.isWelcomeMessageShown(), "Welcome message is displayed for incorrect login data");
+//		Boolean result = login.loginWith(username, password)
+//				.isWelcomeMessageShown();
+//		
+//		if (!result) {
+//			test.log(LogStatus.PASS, "Login with " + username + " - " + password, "User could not log in.");
+//		} else {
+//			test.log(LogStatus.FAIL, "Login with " + username + " - " + password, "Invalid user could log in.");
+//		}
 	}
 	
 	@Test

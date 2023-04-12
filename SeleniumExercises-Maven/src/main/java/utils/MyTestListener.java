@@ -10,24 +10,30 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.relevantcodes.extentreports.LogStatus;
+
 import TestCases.TestCollection;
 
 public class MyTestListener implements ITestListener {
-	private String destinationPath = System.getProperty("user.dir") + "failureScreenshot.png";
+	private String destinationBasePath = System.getProperty("user.dir") + File.separator + "test-output" +  File.separator;
 	
 	public void onTestSuccess(ITestResult iTestResult) {
 		System.out.println(iTestResult.getName() + ": PASS");
-		
-		// TODO - Only this event gets triggered whether it's PASS or FAIL.
-		// TODO - Investigate how to get PASS / FAIL from iTestResult ?
-		
+		TestCollection.test.log(LogStatus.PASS, "Stepname", "Some text");
 	}
 	
 	public void onTestFailure(ITestResult iTestResult) {
-		// Take screenshot
-		System.out.println("Test failure -> taking screenshot");
+		// Log failure
+		String errorMessage = iTestResult.getThrowable().getMessage();
+		TestCollection.test.log(LogStatus.FAIL, "Stepname", errorMessage);
+		String destinationPath = destinationBasePath + iTestResult.getTestName() + ".png";
+		TestCollection.test.log(LogStatus.INFO, "Taking screenshot", TestCollection.test.addScreenCapture(takeScreenshot(destinationPath)));
+		
+	}
+	
+	public String takeScreenshot(String path) {
 		File file = ((TakesScreenshot) DriverManager.getEDriver()).getScreenshotAs(OutputType.FILE);
-		File snapLocation = new File(destinationPath);
+		File snapLocation = new File(path);
 		
 		System.out.println("Temp screenshot saved at " + file.getAbsolutePath());
 		System.out.println("Final screenshot will be saved at " + snapLocation.getAbsolutePath());
@@ -35,13 +41,12 @@ public class MyTestListener implements ITestListener {
 		
 		try {
 			Files.move(file.toPath(), snapLocation.toPath(), StandardCopyOption.REPLACE_EXISTING);
-			TestCollection.test.addScreenCapture("SeleniumExercises-Maventest.png");
 		} catch (IOException e) {
 			System.out.println("Screenshot failed");
 			e.printStackTrace();
 		}
 		
-		System.out.println("Screenshot copy complete. New file exists? - " + snapLocation.exists());
+		return snapLocation.getAbsolutePath();
 	}
 	
 	public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
