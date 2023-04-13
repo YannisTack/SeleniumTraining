@@ -20,12 +20,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
+import java.io.File;
 import java.lang.reflect.Method;
 import java.time.Duration;
 
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -39,14 +41,18 @@ public class TestCollection {
 	@BeforeSuite
 	public static void setup() {
 		  DriverManager.getEDriver().get("https://satrngselcypr.z16.web.core.windows.net/");
-		  report = new ExtentReports(System.getProperty("user.dir") + "ExtentReportResults.html", true);
+		  report = new ExtentReports(System.getProperty("user.dir") + File.separator + "test-output" + File.separator + "ExtentReportResults.html", true);
 	  }
 	
 	@AfterSuite
-	public static void teardown() {
+	public static void finalization() {
 		DriverManager.killDriver();
-		report.endTest(test);
 		report.flush();
+	}
+	
+	@AfterMethod
+	public static void teardown() {
+		report.endTest(test);
 	}
 	  
 	@BeforeMethod
@@ -70,48 +76,25 @@ public class TestCollection {
 	@Test(dataProvider = "LoginTest Error")
 	public void loginWithUsernameAndPassword(String username, String password) {
 		LoginPage login = new LoginPage(DriverManager.getEDriver());
-//		Assert.assertFalse(login.loginWith(username, password)
-//				.isWelcomeMessageShown(), "Welcome message is displayed for incorrect login data");
-		Boolean result = login.loginWith(username, password)
-				.isWelcomeMessageShown();
-		
-		if (!result) {
-			test.log(LogStatus.PASS, "Login with " + username + " - " + password, "User could not log in.");
-		} else {
-			test.log(LogStatus.FAIL, "Login with " + username + " - " + password, "Invalid user could log in.");
-		}
+		Assert.assertFalse(login.loginWith(username, password)
+				.isWelcomeMessageShown(), "Welcome message is displayed for incorrect login data");
 	}
 	
 	@Test
 	public void loginWithCorrectUsernameAndPassword() {
 		LoginPage login = new LoginPage(DriverManager.getEDriver());
-//		Assert.assertTrue(login.loginAsAdmin()
-//				.isWelcomeMessageShown(), "Welcome message is not displayed for correct login data");
-		
-		Boolean result = login.loginAsAdmin()
-				.isWelcomeMessageShown();
-		
-		if (result) {
-			test.log(LogStatus.PASS, "Login as admin", "User successfully logged in.");
-		} else {
-			test.log(LogStatus.FAIL, "Login as admin", "User could not log in.");
-		}
+		Assert.assertTrue(login.loginAsAdmin()
+				.isWelcomeMessageShown(), "Welcome message is not displayed for correct login data");
 	}
 	
 	@Test
 	public void createNewConnection() {
 		LoginPage login = new LoginPage(DriverManager.getEDriver());
 		Person p = new Person();
-		Boolean result = login.loginAsAdmin()
+		Assert.assertTrue(login.loginAsAdmin()
 				.navigateToNewConnectionPage()
 				.addConnection(p)
-				.isCreationFeedbackDisplayed(p);
-				
-		if (result) {
-			test.log(LogStatus.PASS, "Create new connection", "New connection was successfully created.");
-		} else {
-			test.log(LogStatus.FAIL, "Create new connection", "New connection was not successfully created.");
-		}
+				.isCreationFeedbackDisplayed(p), "New connection was not successfully created.");
 	}
 	
 	@Test
@@ -123,39 +106,21 @@ public class TestCollection {
 		test.log(LogStatus.INFO, "Navigate to Stats Page.", "Some navigation info. Maybe a screenshot would be fun here.");
 		
 		System.out.println("Validating table row count.");
-		Assert.assertTrue(stats.getTableRowCount() == 11);
-		
-		if (stats.getTableRowCount() == 11) {
-			test.log(LogStatus.PASS, "Validate table row count", "Table row count is correct.");
-		} else {
-			test.log(LogStatus.FAIL, "Validate table row count", "Table row count is incorrect.");
-		}
+		Assert.assertTrue(stats.getTableRowCount() == 11, "Table row count is incorrect.");
 		
 		System.out.println("Validating testing stat cell.");
-		Assert.assertTrue(stats.getTableCellText(4, 2).equals("2"));
-		
-		if (stats.getTableCellText(4, 2).equals("2")) {
-			test.log(LogStatus.PASS, "Validate table cell", "Table cell value is correct.");
-		} else {
-			test.log(LogStatus.FAIL, "Validate table cell", "Table cell value is incorrect.");
-		}
+		Assert.assertTrue(stats.getTableCellText(4, 2).equals("2"), "Table cell value is incorrect.");
 	}
 	
 	@Test
 	public void javaScriptTest() {
 		LoginPage login = new LoginPage(DriverManager.getEDriver());
 		
-		Boolean result = login.loginAsAdmin()
+		Assert.assertTrue(login.loginAsAdmin()
 				.navigateToConnectionsPage()
 				.resetConnections()
 				.navigateToStatsPage()
-				.getTableCellText(0, 2).equals("N/A");
-		
-		if (result) {
-			test.log(LogStatus.PASS, "Reset connections", "Connections have been reset.");
-		} else {
-			test.log(LogStatus.FAIL, "Reset connections", "Connections have not been reset.");
-		}
+				.getTableCellText(0, 2).equals("N/A"));
 	}
 	
 	@Test

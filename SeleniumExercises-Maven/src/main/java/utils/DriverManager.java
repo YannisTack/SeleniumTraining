@@ -2,7 +2,9 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
@@ -24,14 +26,16 @@ public class DriverManager {
 	
 	public static EventFiringWebDriver getEDriver() {
 		if (eDriver == null) {
-			setChromeEDriver();
+			setEdgeEDriver();
 		}
 		return eDriver;
 	}
 	
 	public static void setChromeDriver() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\YTACK\\Documents\\SeleniumWebDrivers\\chromedriver.exe");
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(options);
 	}
 
 	public static void setFirefoxDriver() {
@@ -41,7 +45,9 @@ public class DriverManager {
 	
 	public static void setEdgeDriver() {
 		System.setProperty("webdriver.edge.driver", "C:\\Users\\YTACK\\Documents\\SeleniumWebDrivers\\msedgedriver.exe");
-		driver = new EdgeDriver();
+		EdgeOptions options = new EdgeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		driver = new EdgeDriver(options);
 	}
 	
 	public static void killDriver() {
@@ -51,13 +57,13 @@ public class DriverManager {
 	}
 	
 	public static void setChromeEDriver() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\YTACK\\Documents\\SeleniumWebDrivers\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\YTACK\\Documents\\SeleniumWebDrivers\\chromedriver.exe");
 		eDriver = new EventFiringWebDriver(getDriver());
 		eDriver.register(new EListener());
 	}
 	
 	public static void setEdgeEDriver() {
-		System.setProperty("webdriver.edge.driver", "C:\\Users\\YTACK\\Documents\\SeleniumWebDrivers\\msedgedriver.exe");
+//		System.setProperty("webdriver.edge.driver", "C:\\Users\\YTACK\\Documents\\SeleniumWebDrivers\\msedgedriver.exe");
 		eDriver = new EventFiringWebDriver(getDriver());
 		eDriver.register(new EListener());
 	}

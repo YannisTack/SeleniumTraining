@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Login_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Login Test Suite</span>
+              <span class="suite-name border-failed">Login Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Login_Test_Suite" class="hide-methods failed suite-Login_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Login_Test_Suite -->
+                      <a href="#" panel-name="suite-Login_Test_Suite" class="show-methods failed suite-Login_Test_Suite"> (show)</a> <!-- show-methods failed suite-Login_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Login_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCases.TestCollection" class="method navigator-link" hash-for-method="loginWithUsernameAndPassword(admin, superduper)">loginWithUsernameAndPassword(admin, superduper)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Login_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -128,17 +142,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCases.TestCollection" class="method navigator-link" hash-for-method="loginWithUsernameAndPassword(admin, Superduper)">loginWithUsernameAndPassword(admin, Superduper)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCases.TestCollection" class="method navigator-link" hash-for-method="loginWithUsernameAndPassword(admin, superduper)">loginWithUsernameAndPassword(admin, superduper)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Login_Test_Suite" title="TestCases.TestCollection" class="method navigator-link" hash-for-method="loginWithUsernameAndPassword(invalidUser, superduper)">loginWithUsernameAndPassword(invalidUser, superduper)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Login_Test_Suite" title="TestCases.TestCollection" class="method navigator-link" hash-for-method="loginWithUsernameAndPassword(admin, Superduper)">loginWithUsernameAndPassword(admin, Superduper)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -163,6 +172,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Login_Test_Suite" class="panel Login_Test_Suite">
+          <div class="suite-Login_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestCases.TestCollection</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithUsernameAndPassword(admin, superduper)">
+                  </a> <!-- loginWithUsernameAndPassword(admin, superduper) -->
+                  <span class="method-name">loginWithUsernameAndPassword</span>
+                  <span class="parameters">(admin,superduper)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Welcome message is displayed for incorrect login data expected [false] but found [true]
+	at TestCases.TestCollection.loginWithUsernameAndPassword(TestCollection.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Login_Test_Suite-class-failed -->
           <div class="suite-Login_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -206,26 +236,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithUsernameAndPassword(admin, Superduper)">
-                  </a> <!-- loginWithUsernameAndPassword(admin, Superduper) -->
-                  <span class="method-name">loginWithUsernameAndPassword</span>
-                  <span class="parameters">(admin,Superduper)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginWithUsernameAndPassword(admin, superduper)">
-                  </a> <!-- loginWithUsernameAndPassword(admin, superduper) -->
-                  <span class="method-name">loginWithUsernameAndPassword</span>
-                  <span class="parameters">(admin,superduper)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="loginWithUsernameAndPassword(invalidUser, superduper)">
                   </a> <!-- loginWithUsernameAndPassword(invalidUser, superduper) -->
                   <span class="method-name">loginWithUsernameAndPassword</span>
                   <span class="parameters">(invalidUser,superduper)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithUsernameAndPassword(admin, Superduper)">
+                  </a> <!-- loginWithUsernameAndPassword(admin, Superduper) -->
+                  <span class="method-name">loginWithUsernameAndPassword</span>
+                  <span class="parameters">(admin,Superduper)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -364,50 +386,50 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createNewConnectionAndValidateStats')
+data.setCell(0, 1, 'expectedConditionTest')
 data.setCell(0, 2, 'TestCases.TestCollection')
-data.setCell(0, 3, 1171);
+data.setCell(0, 3, 1088);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'expectedConditionTest')
+data.setCell(1, 1, 'createNewConnectionAndValidateStats')
 data.setCell(1, 2, 'TestCases.TestCollection')
-data.setCell(1, 3, 1098);
+data.setCell(1, 3, 1078);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'createNewConnection')
 data.setCell(2, 2, 'TestCases.TestCollection')
-data.setCell(2, 3, 1021);
+data.setCell(2, 3, 977);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginWithCorrectUsernameAndPassword')
+data.setCell(3, 1, 'javaScriptTest')
 data.setCell(3, 2, 'TestCases.TestCollection')
-data.setCell(3, 3, 392);
+data.setCell(3, 3, 357);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'javaScriptTest')
+data.setCell(4, 1, 'loginWithCorrectUsernameAndPassword')
 data.setCell(4, 2, 'TestCases.TestCollection')
-data.setCell(4, 3, 358);
+data.setCell(4, 3, 355);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'loginWithUsernameAndPassword')
 data.setCell(5, 2, 'TestCases.TestCollection')
-data.setCell(5, 3, 320);
+data.setCell(5, 3, 304);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'loginWithUsernameAndPassword')
 data.setCell(6, 2, 'TestCases.TestCollection')
-data.setCell(6, 3, 290);
+data.setCell(6, 3, 241);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'loginWithUsernameAndPassword')
 data.setCell(7, 2, 'TestCases.TestCollection')
-data.setCell(7, 3, 206);
+data.setCell(7, 3, 214);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'loginWithUsernameAndPassword')
 data.setCell(8, 2, 'TestCases.TestCollection')
-data.setCell(8, 3, 201);
+data.setCell(8, 3, 183);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'loginWithUsernameAndPassword')
 data.setCell(9, 2, 'TestCases.TestCollection')
-data.setCell(9, 3, 190);
+data.setCell(9, 3, 182);
 window.suiteTableData['Login_Test_Suite']= { tableData: data, tableDiv: 'times-div-Login_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Login_Test_Suite">
               </div> <!-- times-div-Login_Test_Suite -->
             </div> <!-- times-div -->
@@ -428,9 +450,35 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">TestCases.TestCollection</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">loginWithUsernameAndPassword</span>
+                <span class="ignored-method-name">javaScriptTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
+                <br/>
+                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
+                <br/>
+                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
+                <br/>
+                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
                 <br/>
                 <span class="ignored-method-name">javaScriptTest</span>
+                <br/>
+                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
+                <br/>
+                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
+                <br/>
+                <span class="ignored-method-name">loginWithUsernameAndPassword</span>
+                <br/>
+                <span class="ignored-method-name">expectedConditionTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
+                <br/>
+                <span class="ignored-method-name">javaScriptTest</span>
+                <br/>
+                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
+                <br/>
+                <span class="ignored-method-name">createNewConnection</span>
+                <br/>
+                <span class="ignored-method-name">expectedConditionTest</span>
                 <br/>
                 <span class="ignored-method-name">loginWithUsernameAndPassword</span>
                 <br/>
@@ -438,55 +486,29 @@ return data;
                 <br/>
                 <span class="ignored-method-name">createNewConnection</span>
                 <br/>
-                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
-                <br/>
-                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
-                <br/>
-                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
-                <br/>
-                <span class="ignored-method-name">expectedConditionTest</span>
-                <br/>
-                <span class="ignored-method-name">javaScriptTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
-                <br/>
                 <span class="ignored-method-name">expectedConditionTest</span>
                 <br/>
                 <span class="ignored-method-name">createNewConnection</span>
                 <br/>
-                <span class="ignored-method-name">createNewConnection</span>
-                <br/>
-                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
-                <br/>
-                <span class="ignored-method-name">expectedConditionTest</span>
-                <br/>
                 <span class="ignored-method-name">javaScriptTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
                 <br/>
                 <span class="ignored-method-name">loginWithUsernameAndPassword</span>
                 <br/>
                 <span class="ignored-method-name">createNewConnection</span>
                 <br/>
-                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
-                <br/>
-                <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
-                <br/>
                 <span class="ignored-method-name">loginWithUsernameAndPassword</span>
-                <br/>
-                <span class="ignored-method-name">loginWithUsernameAndPassword</span>
-                <br/>
-                <span class="ignored-method-name">expectedConditionTest</span>
-                <br/>
-                <span class="ignored-method-name">javaScriptTest</span>
                 <br/>
                 <span class="ignored-method-name">createNewConnection</span>
                 <br/>
+                <span class="ignored-method-name">expectedConditionTest</span>
+                <br/>
                 <span class="ignored-method-name">createNewConnectionAndValidateStats</span>
                 <br/>
-                <span class="ignored-method-name">javaScriptTest</span>
+                <span class="ignored-method-name">loginWithUsernameAndPassword</span>
                 <br/>
                 <span class="ignored-method-name">loginWithCorrectUsernameAndPassword</span>
+                <br/>
+                <span class="ignored-method-name">javaScriptTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -505,87 +527,129 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void TestCases.TestCollection.loginWithUsernameAndPassword(java.lang.String,java.lang.String))</span>
-                <span class="method-start">6023 ms</span>
+                <span class="method-start">4721 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithUsernameAndPassword(admin, invalidPassword)</span>
-                <span class="method-start">6132 ms</span>
+                <span class="method-start">4824 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">5132 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void TestCases.TestCollection.loginWithUsernameAndPassword(java.lang.String,java.lang.String))</span>
-                <span class="method-start">6455 ms</span>
+                <span class="method-start">5137 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithUsernameAndPassword(invalidUser, superduper)</span>
-                <span class="method-start">6501 ms</span>
+                <span class="method-start">5181 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">5396 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void TestCases.TestCollection.loginWithUsernameAndPassword(java.lang.String,java.lang.String))</span>
-                <span class="method-start">6702 ms</span>
+                <span class="method-start">5397 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithUsernameAndPassword(admin, Superduper)</span>
-                <span class="method-start">6737 ms</span>
+                <span class="method-start">5429 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void TestCases.TestCollection.loginWithUsernameAndPassword(java.lang.String,java.lang.String))</span>
-                <span class="method-start">6927 ms</span>
+                <span class="method-start">5612 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">5612 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">loginWithUsernameAndPassword(/, /)</span>
-                <span class="method-start">6963 ms</span>
+                <span class="method-start">5658 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">5842 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void TestCases.TestCollection.loginWithUsernameAndPassword(java.lang.String,java.lang.String))</span>
-                <span class="method-start">7170 ms</span>
+                <span class="method-start">5842 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">loginWithUsernameAndPassword(admin, superduper)</span>
-                <span class="method-start">7207 ms</span>
+                <span class="method-start">5878 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">6314 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void TestCases.TestCollection.loginWithCorrectUsernameAndPassword())</span>
-                <span class="method-start">7540 ms</span>
+                <span class="method-start">6359 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithCorrectUsernameAndPassword</span>
-                <span class="method-start">7589 ms</span>
+                <span class="method-start">6412 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">6767 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void TestCases.TestCollection.createNewConnection())</span>
-                <span class="method-start">7993 ms</span>
+                <span class="method-start">6778 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createNewConnection</span>
-                <span class="method-start">8052 ms</span>
+                <span class="method-start">6855 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">7833 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void TestCases.TestCollection.createNewConnectionAndValidateStats())</span>
-                <span class="method-start">9084 ms</span>
+                <span class="method-start">7841 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createNewConnectionAndValidateStats</span>
-                <span class="method-start">9151 ms</span>
+                <span class="method-start">7894 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">8972 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void TestCases.TestCollection.javaScriptTest())</span>
-                <span class="method-start">10332 ms</span>
+                <span class="method-start">8980 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">javaScriptTest</span>
-                <span class="method-start">10370 ms</span>
+                <span class="method-start">9011 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">9368 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void TestCases.TestCollection.expectedConditionTest())</span>
-                <span class="method-start">10735 ms</span>
+                <span class="method-start">9378 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">expectedConditionTest</span>
-                <span class="method-start">10771 ms</span>
+                <span class="method-start">9415 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-suite after">
+              <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">11875 ms</span>
+                <span class="method-start">10503 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">finalization</span>
+                <span class="method-start">10513 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
